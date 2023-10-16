@@ -12,7 +12,7 @@ const All_Messages = () => {
     console.log(selectedUser);
   },[selectedUser]);
   useEffect(() => {
-    axios.post("http://localhost:3001/currentSession", { withCredentials: true })
+    axios.post("https://mysocial-1473059facea.herokuapp.com/currentSession", { withCredentials: true })
       .then((response) => {
         if (response.data.username) {
           console.log(`the current user is ${response.data.username}`);
@@ -28,7 +28,7 @@ const All_Messages = () => {
   }, [user]);
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/recentConversation?username=${user}`, { withCredentials: true })
+    axios.get(`https://mysocial-1473059facea.herokuapp.com/recentConversation?username=${user}`, { withCredentials: true })
       .then(response => {
         console.log('Full response from the server:', response);
         if (response.data) {
