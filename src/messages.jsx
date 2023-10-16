@@ -41,7 +41,7 @@ const backgroundPicDetermine = (sender)=>{
 }
   
 useEffect(()=>{
-axios.post("http://localhost:3001/currentSession", { withCredentials: true }).then((response)=>{
+axios.post("https://mysocial-1473059facea.herokuapp.com/currentSession", { withCredentials: true }).then((response)=>{
 if(response.data.username){
   console.log(`the current user is ${response.data.username}`)
   setUser(response.data.username);
@@ -79,8 +79,8 @@ console.log("something else is wrong")
 useEffect(() => {
   const fetchConversation = async () => {
     try {
-      const responseSender = await axios.get(`http://localhost:3001/conversation/${user}/${Receiver}`);
-      const responseReceiver = await axios.get(`http://localhost:3001/conversation/${Receiver}/${user}`);
+      const responseSender = await axios.get(`https://mysocial-1473059facea.herokuapp.com/conversation/${user}/${Receiver}`);
+      const responseReceiver = await axios.get(`https://mysocial-1473059facea.herokuapp.com/conversation/${Receiver}/${user}`);
       setConversation(prevConversation => {
         const updatedConversation = [...prevConversation];
         responseSender.data.forEach(message => {
@@ -114,7 +114,7 @@ useEffect(() => {
 
 const handleInput = ()=>{
 //event.preventDefault();
-axios.post(`http://localhost:3001/send_messages`,{
+axios.post(`https://mysocial-1473059facea.herokuapp.com/send_messages`,{
 text:messageBox,
 sender:user,
 receiver: Receiver,

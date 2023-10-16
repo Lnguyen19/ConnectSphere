@@ -19,7 +19,7 @@ const close = ()=>{
 
 
 useEffect(()=>{
-axios.post("http://localhost:3001/currentSession", { withCredentials: true }).then((response)=>{
+axios.post("https://mysocial-1473059facea.herokuapp.com/currentSession", { withCredentials: true }).then((response)=>{
 if(response.data.username){
   console.log(`the current user is ${response.data.username}`)
   setUser(response.data.username);

@@ -19,13 +19,13 @@ if(picture=='undefined'){
      beingReturn = 'https://i.pinimg.com/736x/f1/0f/f7/f10ff70a7155e5ab666bcdd1b45b726d.jpg';
 }
 else {
-  beingReturn =  `http://localhost:3001${picture}`;
+  beingReturn =  `https://mysocial-1473059facea.herokuapp.com${picture}`;
 }
 //console.log(beingReturn);
 return beingReturn;
 }
 useEffect(()=>{
-axios.post("http://localhost:3001/currentSession", { withCredentials: true }).then((response)=>{
+axios.post("https://mysocial-1473059facea.herokuapp.com/currentSession", { withCredentials: true }).then((response)=>{
 if(response.data.username){
   console.log(`the current user is ${response.data.username}`)
   setUsername(response.data.username);
@@ -43,7 +43,7 @@ console.log("something else is wrong")
 
 
 useEffect(() => {
-  axios.get('http://localhost:3001/getSubscribe', {
+  axios.get('https://mysocial-1473059facea.herokuapp.com/getSubscribe', {
     params: {
       username: username
     },
@@ -59,7 +59,7 @@ useEffect(() => {
 }, [username,friends]);
 
 useEffect(()=>{
-axios.get("http://localhost:3001/getPosts",{withCredentials:true}).then((response)=>{
+axios.get("https://mysocial-1473059facea.herokuapp.com/getPosts",{withCredentials:true}).then((response)=>{
   if(response.data){
     setPosts(response.data);
   }
@@ -108,7 +108,7 @@ return find;
 const handleLikes=(postId, username)=>{
 
   if(canLike==true){
-  axios.post('http://localhost:3001/liking',{
+  axios.post('https://mysocial-1473059facea.herokuapp.com/liking',{
     postId: postId,
     username:username,
   },{withCredentials:true}).then(response=>{
@@ -122,7 +122,7 @@ const handleLikes=(postId, username)=>{
  }
 
 else {
-  axios.delete('http://localhost:3001/unlike', {
+  axios.delete('https://mysocial-1473059facea.herokuapp.com/unlike', {
             data: {
                 postId: postId,
                 username: username,
@@ -142,7 +142,7 @@ else {
 }
 
 const add_comment = (comment,id,username)=>{
-axios.post('http://localhost:3001/addComment',{
+axios.post('https://mysocial-1473059facea.herokuapp.com/addComment',{
 postId:id,
 content: comment,
 username: username, 
@@ -204,7 +204,7 @@ else {
    <div  class="card" style={{width: "1000px"}}>
  { //<img class="card-img-top" src="https://assets2.cbsnewsstatic.com/hub/i/r/2023/03/15/749d5e5c-e9bd-43bd-a4c0-682b6e7b2ce3/thumbnail/640x360/dfde84421bdc52d56b818dddb1b06d4b/image009.png?v=ab9bbd2a20facf22a21dc5066c583597" style = {{height:'500px',width:'70%'}}alt="Card image cap"/>
   }
-  <img class="card-img-top" src={`http://localhost:3001${posting.picture}`} style = {{height:'500px',width:'auto'}}alt="Card image cap"/>
+  <img class="card-img-top" src={`https://mysocial-1473059facea.herokuapp.com${posting.picture}`} style = {{height:'500px',width:'auto'}}alt="Card image cap"/>
 
   <div class="card-body" >
 

@@ -8,7 +8,7 @@ const [username,setUsername] = useState('');
 const [searchInput, setSearchInput] = useState('');
 const navigate = useNavigate();
 useEffect(()=>{
-axios.get(`http://localhost:3001/search`, { params: { username: searchInput }},{withCredentials:true}).then(response=>{
+axios.get(`https://mysocial-1473059facea.herokuapp.com/search`, { params: { username: searchInput }},{withCredentials:true}).then(response=>{
 	if(response.data){
 		setUsername(response.data);
 
@@ -28,7 +28,7 @@ if(picture=='undefined'){
      beingReturn = 'https://i.pinimg.com/736x/f1/0f/f7/f10ff70a7155e5ab666bcdd1b45b726d.jpg';
 }
 else {
-  beingReturn =  `http://localhost:3001${picture}`;
+  beingReturn =  `https://mysocial-1473059facea.herokuapp.com${picture}`;
 }
 //console.log(beingReturn);
 return beingReturn;

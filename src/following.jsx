@@ -7,7 +7,7 @@ const [friends,setFriends] = useState([])
 const [username,setUsername] = useState('');
 const [profilePic,setProfilePic] = useState([]);
 useEffect(()=>{
-axios.post("http://localhost:3001/currentSession", { withCredentials: true }).then((response)=>{
+axios.post("https://mysocial-1473059facea.herokuapp.com/currentSession", { withCredentials: true }).then((response)=>{
 if(response.data.username){
   console.log(`the current user is ${response.data.username}`)
   setUsername(response.data.username);
@@ -24,7 +24,7 @@ console.log("something else is wrong")
 },[]);
 
 useEffect(()=>{
-axios.get(`http://localhost:3001/getFollowing/${username}`).then(response=>{
+axios.get(`https://mysocial-1473059facea.herokuapp.com/getFollowing/${username}`).then(response=>{
 
 if(response.data){
 	setFriends(response.data);
@@ -39,7 +39,7 @@ if(response.data){
 },[username]);
 const unfollow = (person)=>{
 
-axios.delete('http://localhost:3001/removeFollowing',{params:{
+axios.delete('https://mysocial-1473059facea.herokuapp.com/removeFollowing',{params:{
   username:username,
   following:person,
 }}).then(response=>{
@@ -51,7 +51,7 @@ axios.delete('http://localhost:3001/removeFollowing',{params:{
 
   console.log(error);
 });
-axios.delete('http://localhost:3001/removeFollower',{params:{
+axios.delete('https://mysocial-1473059facea.herokuapp.com/removeFollower',{params:{
   username:person,
   follower:username,
 }}).then(response=>{
@@ -67,12 +67,12 @@ axios.delete('http://localhost:3001/removeFollower',{params:{
 
 const getProfilePic = async (username) => {
     try {
-      const profilePicResponse = await axios.get(`http://localhost:3001/getProfilePic/${username}`, { withCredentials: true });
+      const profilePicResponse = await axios.get(`https://mysocial-1473059facea.herokuapp.com/getProfilePic/${username}`, { withCredentials: true });
 
       if (profilePicResponse.data && profilePicResponse.data.length > 0) {
         if( profilePicResponse.data[0].pictureUrl){
         console.log("Fetched profile picture URL:", profilePicResponse.data[0].pictureUrl);
-        return `http://localhost:3001${profilePicResponse.data[0].pictureUrl}`;
+        return `https://mysocial-1473059facea.herokuapp.com/${profilePicResponse.data[0].pictureUrl}`;
             }
 
         else{ console.log('No profile picture found.');

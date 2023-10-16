@@ -15,7 +15,7 @@ const reset=()=>{
 }
 const register = ()=>{
 
-    axios.post("http://localhost:3001/register", {name,age,username: usernameSignUp, password: passwordSignUp})
+    axios.post("https://mysocial-1473059facea.herokuapp.com/register", {name,age,username: usernameSignUp, password: passwordSignUp})
   .then((response) => {
     console.log(response);
     setMessage('Your account has been successfully registered, press done to log into your account')
