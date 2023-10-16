@@ -1,0 +1,53 @@
+#wholeThingLJ2{
+    background-image: url('https://img.freepik.com/free-vector/vibrant-summer-ombre-background-vector_53876-105765.jpg?w=996&t=st=1697473567~exp=1697474167~hmac=c02f895efa903c585eca1d441e753fcb389842186b91fad377dc984c05352472');
+    min-height: 700px;
+    background-repeat: no-repeat;
+      background-size: cover;
+      overflow-x: hidden;
+}
+
+#mainText{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#LJH1{
+    position: relative;
+    left: 425px;
+    padding-right: 150px;
+    padding-bottom: 30px;
+}
+
+#LJH3{
+    font-size: 18px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border: solid;
+    border-radius: 10px;
+    padding-left: 20px;
+    margin-right: 50px;
+    min-height: 100px;
+    /* border-radius: 50px; */
+}
+
+#textBox{
+    padding-top: 100px;
+}
+
+#ljInput{
+    margin-left: 50px;
+    width: 900px;
+    margin-right:30px;
+    min-height: 80px;
+    box-shadow: 10px 10px 8px #888888;
+    border-radius: 10px;
+}
+#sendingButton_{
+    background-color:aqua;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 8px #888888;
+    position: relative;
+    top: -10px;
+    right: 20px;
+}

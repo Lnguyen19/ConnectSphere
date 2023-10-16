@@ -1,0 +1,25 @@
+.body{
+	overflow-x: hidden;
+}
+.navBar_{
+	overflow-x: hidden;
+	background-image: url('cool-background.png');
+}
+.icon_{
+	color: salmon;
+}
+
+.icon:hover{
+	 background-color: #c3e6cb;
+  border-color: #28a745;
+}
+.nav-item{
+	 transition: transform 0.3s ease-in-out;
+
+}
+.nav-item:hover .nav-link {
+  background-color: lightgreen;
+  border-color: green;
+  color: lightgreen; 
+    transform: scale(1.1);
+}

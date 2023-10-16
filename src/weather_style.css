@@ -1,0 +1,30 @@
+
+.day-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-image: url('day_time.JPG');
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+   
+    position: relative;
+     
+  position: relative;
+  left: 500px;
+}
+
+.day-box p {
+  margin: 5px 0;
+}
+
+.day-box p:first-child {
+  font-weight: bold;
+}
+.searchingName{
+ color: cyan;
+}
+.entering{
+  padding: 5px;
+  
+}

@@ -1,0 +1,15 @@
+functionality
+_______________________________
+profile_view: 100%
+add followers  100%
+list of followers:100%
+list of following:100%
+Likes: 100%
+comments: 100%%
+message: 100%
+bio:100%
+All Messages:95%
+share (optional):
+display picture in other places. 80%
+Deep learning: 
+_________________________________

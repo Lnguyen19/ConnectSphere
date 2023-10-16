@@ -1,0 +1,39 @@
+#whole{
+	background-image: url('cucumber.png');
+	min-height: 700px;
+	overflow-x: hidden ;
+}
+.sidebaropen{
+	width: 320px;
+
+}
+.conversations{
+	border: solid;
+
+	height: 50px;
+	width: 300px;
+	margin: 5px;
+ display: flex;
+}
+.bar{
+	width: 450px;
+	min-height: 67px;
+	border: solid;
+	background-color: white;
+	border-radius: 5px;
+	 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	   transition: transform 0.3s ease-in-out;
+}
+.bar:hover {
+  transform: scale(1.05);
+  background-color: orange;
+}
+#rightSideMessage{
+	position: relative;
+	left: 460px;
+  top: -160px;
+  width: 1060px;
+  min-height: 690px;
+  border: solid;
+  border-color: lightblue;
+}

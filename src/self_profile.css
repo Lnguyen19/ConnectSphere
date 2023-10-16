@@ -1,0 +1,74 @@
+#background_pic{
+	height: 370px;
+	width: 100%;
+}
+.profile-picture{
+
+	border: 10px solid gray;
+	width: 430px;  
+    height: 430px;
+    border-radius: 50%;  
+    object-fit: cover; 
+    border-color: purple;
+ 
+}
+#profile{
+       
+	position: relative;
+	bottom: 210px;
+}
+#name{
+  
+	position: relative;
+	left: 450px;
+	bottom:150px;
+		overflow-x: hidden;
+}
+
+#all{
+		overflow-x: hidden;
+}
+#stats{
+	position: relative;
+	
+	left: 950px;
+	bottom: 350px;
+}
+#actions{
+	position: relative;
+	bottom: 350px;
+	left:950px;
+}
+#changingBackground{
+	position: relative;
+	left: 650px;
+	bottom: 140px;
+}
+#back_button{
+	position: relative;
+	left: 550px;
+	bottom: 220px;
+}
+#bioSection{
+	position: relative;
+	bottom: 250px;
+}
+#bio{
+	border: solid;
+	height: 300px;
+	width: 100%;
+}
+#backgroundInput{
+	
+	
+
+}
+
+#profile_update{
+	position: relative;
+	bottom: 120px;
+}
+#submitBio{
+  position: relative;
+  left: 20px;
+}

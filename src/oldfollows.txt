@@ -1,0 +1,42 @@
+ //axios.post('http://localhost:3001/addFriends',{
+ // username:username.username,
+ // follower: user,
+ //},{withCredentials:true}).then(response=>{
+ // console.log(`${user} started following ${username.username}`)
+ //}).catch(error=>{
+ // console.log(error);
+ //})
+
+// axios.post('http://localhost:3001/addFollowing',{
+ // username:user,
+ // following: username.username,
+ //},{withCredentials:true}).then(response=>{
+ // console.log(`${username.username} is being follow by ${user}`);
+ //}).catch(error=>{
+  //console.log(error);
+ //})
+
+
+
+
+
+
+axios.post('http://localhost:3001/addFollowers',{
+  usernameId:username._id,
+  follower: user,
+ },{withCredentials:true}).then(response=>{
+  console.log(`${user} started following ${username.username}`)
+ }).catch(error=>{
+  console.log(error);
+ })
+
+ axios.post('http://localhost:3001/addFollowings',{
+  usernameId:user,
+  following: username._id,
+ },{withCredentials:true}).then(response=>{
+  console.log(`${username.username} is being follow by ${user}`);
+ }).catch(error=>{
+  console.log(error);
+
+
+}

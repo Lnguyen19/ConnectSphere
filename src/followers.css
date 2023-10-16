@@ -1,0 +1,66 @@
+
+#wholeThingLJ{
+    /* background-color: rgb(94, 142, 78);  */
+    min-height: 800px;
+    background-image: url('https://images.pexels.com/photos/7135073/pexels-photo-7135073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    overflow-x: hidden;
+      background-size: cover;
+}
+
+#ljH1{
+    position: relative;
+    left: 550px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+/* #ljH1{
+    position: relative;
+    left: 500px;
+} */
+
+#ljH2{
+    position: relative;
+    left: 520px;  
+    padding-bottom: 50px;
+}
+/* .h1{
+    position: relative;
+    left: 100px;
+} */
+
+.ljborder{
+    /* background-color: rgb(241, 50, 50); */
+}
+
+.ljButton{
+position: relative;
+/* border-radius: 50%; */
+width: 100px;
+height: 50px;
+left: 50px;
+font-size: 15px;
+font-weight: bold;
+margin-top: 10px;
+margin-bottom: 10px;
+background-color: rgba(67, 119, 123, 0);
+color: black;
+border: 2px solid #00010274;
+}
+
+.ljButton:hover{
+    background-color: rgba(240, 255, 255, 0.278);
+}
+
+.ljlistGroup{
+    background-color:rgba(67, 119, 123, 0.358);
+}
+
+.ljList{
+    /* background-color: rgb(194, 62, 148); */
+    position:relative;
+    left: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    list-style-type: none
+}

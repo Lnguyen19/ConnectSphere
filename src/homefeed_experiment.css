@@ -1,0 +1,67 @@
+#posting{
+	position: relative;
+	width: 70%; 
+	left: 10%;
+	border: solid;
+   overflow-x: hidden;
+}
+#photoInput{
+	position: relative;
+	width: 70%;
+	left: 30%;
+       overflow-x: hidden;
+	
+}
+#feeling{
+	width: 50%;
+	position: relative;
+	left: 60%;
+	bottom: 29px;
+  
+}
+#upload_button{
+	position: relative;
+	left: 975px;
+	bottom: 67.2px;
+	border: solid;
+    height: 45px;
+    width: 65px;
+       overflow-x: hidden;
+       
+}
+.body{
+	overflow-x: hidden;
+
+}
+#storage{
+	overflow-x: hidden;
+
+}
+#location{
+	position: relative;
+	bottom: 67.6px;
+    left: 152px;
+    border: solid;
+}
+#posts_photos{
+	position: relative;
+	left :200px
+}
+#postCard{
+	position: relative;
+	left: 90px;
+
+}
+#wholeThing {
+ background-color: lightgray;
+
+}
+#info{
+	border: solid;
+	border-color: lightgray;
+}
+#list{
+	border: solid;
+	border-color: lightgray;
+}
+
