@@ -139,10 +139,10 @@ axios.get(`https://mysocial-1473059facea.herokuapp.com/getUserPosts/${username.u
 },[posts])
 
 
-
+//___________checking function
 
  
-
+//___________checking function
 //_____________________________________
 return(<>;
    <div id = 'all' class = 'header-container'> 
@@ -157,9 +157,9 @@ return(<>;
   <div id= 'name'>
       <input id = 'backgroundInput' type = 'file' onChange= {handleBackground_change}/> 
       <div id = 'updateBackground' onClick={uploadBackgroundPic}> <button >Update background</button> </div>
-  <h2 style = {{fontWeight:'bold'}}>Username: profile name</h2>
-  <h2 style = {{fontWeight:'bold'}}>Name: name  </h2>  
-  <h2 style = {{fontWeight:'bold'}}>Age: age</h2>
+  <h2 style = {{fontWeight:'bold'}}>Username: {profile.username}</h2>
+  <h2 style = {{fontWeight:'bold'}}>Name: {username.name} </h2>  
+  <h2 style = {{fontWeight:'bold'}}>Age: {username.age}</h2>
 
    </div>
 <div id = 'profile_update'>
@@ -181,10 +181,10 @@ return(<>;
  {//<textarea  style = {{width:'100%',height:'280px'}} onChange={
    //(e)=>{setBio(e.target.value)}}  value = {bio}></textarea>
  }
- <input type = 'text' style = {{width:'100%',height:'280px'}} onChange = {handleBio_change}/> 
+ <input type = 'text' style = {{width:'100%',height:'280px'}} /> 
 </div>
 <button class = 'btn-danger' onClick = {()=>setReadOnly_(false)} >Edit </button> 
-<button id = 'submitBio'class = 'btn-success' onClick = {()=>uploadBio()}> Submit Bio</button>
+<button id = 'submitBio'class = 'btn-success' > Submit Bio</button>
 </div>
 <div id = 'postSection'>
 <h1>Posts</h1>
