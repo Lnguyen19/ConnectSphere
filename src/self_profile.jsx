@@ -186,9 +186,9 @@ return(<>;
   <div id= 'name'>
       <input id = 'backgroundInput' type = 'file' onChange= {handleBackground_change}/> 
       <div id = 'updateBackground' onClick={uploadBackgroundPic}> <button >Update background</button> </div>
-  <h2 style = {{fontWeight:'bold'}}>Username: {testingUsername(username.username)}</h2>
-  <h2 style = {{fontWeight:'bold'}}>Name: {testingName(username.name)} </h2>  
-  <h2 style = {{fontWeight:'bold'}}>Age: {testingAge(username.age)}</h2>
+  <h2 style = {{fontWeight:'bold'}}>Username: {profile.username}</h2>
+  <h2 style = {{fontWeight:'bold'}}>Name: {username.username} </h2>  
+  <h2 style = {{fontWeight:'bold'}}>Age: {username.age}</h2>
 
    </div>
 <div id = 'profile_update'>
