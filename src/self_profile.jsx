@@ -144,39 +144,6 @@ axios.get(`https://mysocial-1473059facea.herokuapp.com/getUserPosts/${username.u
  
 
 //_____________________________________
-
-//________testing
-const testingUsername=(username)=>{
-  let beingReturn;
-  if(username){
-     beingReturn = username;
-  }
-  else {
-    beingReturn = 'null';
-  }
-  return beingReturn;
-}
-const testingName=(name)=>{
-  let beingReturn;
-  if(name){
-     beingReturn = name;
-  }
-  else {
-    beingReturn = 'null';
-  }
-  return beingReturn;
-}
-const testingAge=(age)=>{
-  let beingReturn;
-  if(age){
-    beingReturn = age;
-  }
-  else {
-    beingReturn = 0;
-  }
-  return beingReturn;
-}
-//________testing
 return(<>;
    <div id = 'all' class = 'header-container'> 
    <div id='back-pic'>
