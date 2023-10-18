@@ -147,7 +147,22 @@ else {
   return 'null';
 }
 }
-
+const testingName = (name)=>{
+if(name){
+  return username;
+}
+else {
+  return 'null';
+}
+}
+const testingAge = (age)=>{
+if(age){
+  return age;
+}
+else {
+  return 0;
+}
+}
  
 
 //_____________________________________
@@ -165,8 +180,8 @@ return(<>;
       <input id = 'backgroundInput' type = 'file' onChange= {handleBackground_change}/> 
       <div id = 'updateBackground' onClick={uploadBackgroundPic}> <button >Update background</button> </div>
   <h2 style = {{fontWeight:'bold'}}>Username: {testingUsername(username.username)}</h2>
-  <h2 style = {{fontWeight:'bold'}}>Name: {username.name} </h2>  
-  <h2 style = {{fontWeight:'bold'}}>Age: {username.age}</h2>
+  <h2 style = {{fontWeight:'bold'}}>Name: {testingName(username.name)} </h2>  
+  <h2 style = {{fontWeight:'bold'}}>Age: {testingAge(username.age)}</h2>
 
    </div>
 <div id = 'profile_update'>
