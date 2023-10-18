@@ -169,12 +169,12 @@ else {
 return(<>;
    <div id = 'all' class = 'header-container'> 
    <div id='back-pic'>
-     <img id = 'background_pic' src ={background_picture}/>
+     <img id = 'background_pic' />
            
     </div>
 
     <div id = 'profile' class = 'container-fluid'>
-  <img className = 'profile-picture'src = {picture}/>
+  <img className = 'profile-picture'/>
   <br/>
   <div id= 'name'>
       <input id = 'backgroundInput' type = 'file' /> 
@@ -185,7 +185,7 @@ return(<>;
 
    </div>
 <div id = 'profile_update'>
-<input type = 'file' />
+<input type = 'file'  />
 <div>
 <button  > Update profile photo</button>
 </div>
