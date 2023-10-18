@@ -169,25 +169,25 @@ else {
 return(<>;
    <div id = 'all' class = 'header-container'> 
    <div id='back-pic'>
-     <img id = 'background_pic' />
+     <img id = 'background_pic' src ={background_picture}/>
            
     </div>
 
     <div id = 'profile' class = 'container-fluid'>
-  <img className = 'profile-picture'/>
+  <img className = 'profile-picture'src = {picture}/>
   <br/>
   <div id= 'name'>
-      <input id = 'backgroundInput' type = 'file' /> 
-      <div id = 'updateBackground' > <button >Update background</button> </div>
+      <input id = 'backgroundInput' type = 'file' onChange= {handleBackground_change}/> 
+      <div id = 'updateBackground' onClick={uploadBackgroundPic}> <button >Update background</button> </div>
   <h2 style = {{fontWeight:'bold'}}>Username: {testingUsername(username.username)}</h2>
   <h2 style = {{fontWeight:'bold'}}>Name: {testingName(username.name)} </h2>  
   <h2 style = {{fontWeight:'bold'}}>Age: {testingAge(username.age)}</h2>
 
    </div>
 <div id = 'profile_update'>
-<input type = 'file'  />
+<input type = 'file'  onChange ={handleProfile_pic_change}/>
 <div>
-<button  > Update profile photo</button>
+<button  onClick = {uploadProfilePic}> Update profile photo</button>
 </div>
 </div>
 
