@@ -144,6 +144,39 @@ axios.get(`https://mysocial-1473059facea.herokuapp.com/getUserPosts/${username.u
  
 
 //_____________________________________
+
+//________testing
+const testingUsername=(username)=>{
+  let beingReturn;
+  if(username){
+     beingReturn = username;
+  }
+  else {
+    beingReturn = 'null';
+  }
+  return beingReturn;
+}
+const testingName=(name)=>{
+  let beingReturn;
+  if(name){
+     beingReturn = name;
+  }
+  else {
+    beingReturn = 'null';
+  }
+  return beingReturn;
+}
+const testingAge=(age)=>{
+  let beingReturn;
+  if(age){
+    beingReturn = age;
+  }
+  else {
+    beingReturn = 0;
+  }
+  return beingReturn;
+}
+//________testing
 return(<>;
    <div id = 'all' class = 'header-container'> 
    <div id='back-pic'>
@@ -181,10 +214,10 @@ return(<>;
  {//<textarea  style = {{width:'100%',height:'280px'}} onChange={
    //(e)=>{setBio(e.target.value)}}  value = {bio}></textarea>
  }
- <input type = 'text' style = {{width:'100%',height:'280px'}} /> 
+ <input type = 'text' style = {{width:'100%',height:'280px'}} onChange = {handleBio_change}/> 
 </div>
-<button class = 'btn-danger'  >Edit </button> 
-<button id = 'submitBio'class = 'btn-success' > Submit Bio</button>
+<button class = 'btn-danger' onClick = {()=>setReadOnly_(false)} >Edit </button> 
+<button id = 'submitBio'class = 'btn-success' onClick = {()=>uploadBio()}> Submit Bio</button>
 </div>
 <div id = 'postSection'>
 <h1>Posts</h1>
