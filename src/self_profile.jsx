@@ -177,17 +177,17 @@ return(<>;
   <img className = 'profile-picture'src = {picture}/>
   <br/>
   <div id= 'name'>
-      <input id = 'backgroundInput' type = 'file' onChange= {handleBackground_change}/> 
-      <div id = 'updateBackground' onClick={uploadBackgroundPic}> <button >Update background</button> </div>
+      <input id = 'backgroundInput' type = 'file' /> 
+      <div id = 'updateBackground' > <button >Update background</button> </div>
   <h2 style = {{fontWeight:'bold'}}>Username: {testingUsername(username.username)}</h2>
   <h2 style = {{fontWeight:'bold'}}>Name: {testingName(username.name)} </h2>  
   <h2 style = {{fontWeight:'bold'}}>Age: {testingAge(username.age)}</h2>
 
    </div>
 <div id = 'profile_update'>
-<input type = 'file'  onChange ={handleProfile_pic_change}/>
+<input type = 'file' />
 <div>
-<button  onClick = {uploadProfilePic}> Update profile photo</button>
+<button  > Update profile photo</button>
 </div>
 </div>
 
@@ -203,10 +203,10 @@ return(<>;
  {//<textarea  style = {{width:'100%',height:'280px'}} onChange={
    //(e)=>{setBio(e.target.value)}}  value = {bio}></textarea>
  }
- <input type = 'text' style = {{width:'100%',height:'280px'}} /> 
+ <input type = 'text' style = {{width:'100%',height:'280px'}} onChange = {handleBio_change}/> 
 </div>
-<button class = 'btn-danger'  >Edit </button> 
-<button id = 'submitBio'class = 'btn-success' > Submit Bio</button>
+<button class = 'btn-danger' onClick = {()=>setReadOnly_(false)} >Edit </button> 
+<button id = 'submitBio'class = 'btn-success' onClick = {()=>uploadBio()}> Submit Bio</button>
 </div>
 <div id = 'postSection'>
 <h1>Posts</h1>
