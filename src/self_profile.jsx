@@ -139,7 +139,14 @@ axios.get(`https://mysocial-1473059facea.herokuapp.com/getUserPosts/${username.u
 },[posts])
 
 
-
+const testingUsername = (username)=>{
+if(username){
+  return username;
+}
+else {
+  return 'null';
+}
+}
 
  
 
@@ -157,7 +164,7 @@ return(<>;
   <div id= 'name'>
       <input id = 'backgroundInput' type = 'file' onChange= {handleBackground_change}/> 
       <div id = 'updateBackground' onClick={uploadBackgroundPic}> <button >Update background</button> </div>
-  <h2 style = {{fontWeight:'bold'}}>Username: {profile.username}</h2>
+  <h2 style = {{fontWeight:'bold'}}>Username: {testingUsername(username.username)}</h2>
   <h2 style = {{fontWeight:'bold'}}>Name: {username.name} </h2>  
   <h2 style = {{fontWeight:'bold'}}>Age: {username.age}</h2>
 
