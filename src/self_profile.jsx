@@ -139,7 +139,7 @@ axios.get(`https://mysocial-1473059facea.herokuapp.com/getUserPosts/${username.u
 },[posts])
 
 
-//___________checking function
+//___________checking funct
 
  
 //___________checking function
@@ -181,10 +181,10 @@ return(<>;
  {//<textarea  style = {{width:'100%',height:'280px'}} onChange={
    //(e)=>{setBio(e.target.value)}}  value = {bio}></textarea>
  }
- <input type = 'text' style = {{width:'100%',height:'280px'}} /> 
+ <input type = 'text' style = {{width:'100%',height:'280px'}} onChange = {handleBio_change}/> 
 </div>
 <button class = 'btn-danger' onClick = {()=>setReadOnly_(false)} >Edit </button> 
-<button id = 'submitBio'class = 'btn-success' > Submit Bio</button>
+<button id = 'submitBio'class = 'btn-success' onClick = {()=>uploadBio()}> Submit Bio</button>
 </div>
 <div id = 'postSection'>
 <h1>Posts</h1>
