@@ -203,10 +203,10 @@ return(<>;
  {//<textarea  style = {{width:'100%',height:'280px'}} onChange={
    //(e)=>{setBio(e.target.value)}}  value = {bio}></textarea>
  }
- <input type = 'text' style = {{width:'100%',height:'280px'}} onChange = {handleBio_change}/> 
+ <input type = 'text' style = {{width:'100%',height:'280px'}} /> 
 </div>
-<button class = 'btn-danger' onClick = {()=>setReadOnly_(false)} >Edit </button> 
-<button id = 'submitBio'class = 'btn-success' onClick = {()=>uploadBio()}> Submit Bio</button>
+<button class = 'btn-danger'  >Edit </button> 
+<button id = 'submitBio'class = 'btn-success' > Submit Bio</button>
 </div>
 <div id = 'postSection'>
 <h1>Posts</h1>
