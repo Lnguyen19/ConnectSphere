@@ -239,7 +239,7 @@ else {
    <div  class="card" style={{width: "1000px"}}>
  { //<img class="card-img-top" src="https://assets2.cbsnewsstatic.com/hub/i/r/2023/03/15/749d5e5c-e9bd-43bd-a4c0-682b6e7b2ce3/thumbnail/640x360/dfde84421bdc52d56b818dddb1b06d4b/image009.png?v=ab9bbd2a20facf22a21dc5066c583597" style = {{height:'500px',width:'70%'}}alt="Card image cap"/>
   }
-  <img class="card-img-top" src={`http://localhost:3001${posting.picture}`} style = {{height:'500px',width:'auto'}}alt="Card image cap"/>
+  <img class="card-img-top" src={`https://mysocial-1473059facea.herokuapp.com${posting.picture}`} style = {{height:'500px',width:'auto'}}alt="Card image cap"/>
 
   <div class="card-body" >
 
@@ -257,8 +257,8 @@ else {
   </ul>
   </div>
   <div class="card-body">
-    <a  class="card-link"> <i class="bi bi-hand-thumbs-up" style = {{color:'blue'}}></i>{posting.likesCount.length} likes</a>
-    <a  class="card-link"> 2 Comments</a>
+    <a href="#" class="card-link"> <i class= 'bi bi-hand-thumbs-up' />{posting.likesCount.length} likes</a>
+    <a href="#" class="card-link">  {posting.comments.length} comments</a>
   </div>
 
 </div>
@@ -301,12 +301,6 @@ else {
 
 
 })()}
-
-
-
-
-
-
 
 
 
