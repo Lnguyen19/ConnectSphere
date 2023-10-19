@@ -239,13 +239,13 @@ else {
    <div  class="card" style={{width: "1000px"}}>
  { //<img class="card-img-top" src="https://assets2.cbsnewsstatic.com/hub/i/r/2023/03/15/749d5e5c-e9bd-43bd-a4c0-682b6e7b2ce3/thumbnail/640x360/dfde84421bdc52d56b818dddb1b06d4b/image009.png?v=ab9bbd2a20facf22a21dc5066c583597" style = {{height:'500px',width:'70%'}}alt="Card image cap"/>
   }
-  
+  <img class="card-img-top" src={`https://mysocial-1473059facea.herokuapp.com${posting.picture}`} style = {{height:'500px',width:'auto'}}alt="Card image cap"/>
 
   <div class="card-body" >
 
     <h5 class="card-title"> 
-
-     {"  "}  <a class="nav-link"  >{posting.username}</a> </h5> 
+<img src = {userAvatar(posting.profile_pic)} style = {{height:'40px',width:'40px'}} alt = 'not working'/>
+ <a class="nav-link"  >{posting.username}</a> </h5> 
     <p class="card-text">{posting.content}</p>
   </div>
   <div >
