@@ -257,7 +257,7 @@ else {
   </ul>
   </div>
   <div class="card-body">
-    <a  class="card-link"> <i class="bi bi-hand-thumbs-up" style = {{color:'blue'}}></i> likes</a>
+    <a  class="card-link"> <i class="bi bi-hand-thumbs-up" style = {{color:'blue'}}></i>{posting.likesCount.length} likes</a>
     <a  class="card-link"> 2 Comments</a>
   </div>
 
