@@ -244,7 +244,7 @@ else {
   <div class="card-body" >
 
     <h5 class="card-title"> 
-<img src = {userAvatar(posting.profile_pic)} style = {{height:'40px',width:'40px'}}/>
+<img src = {userAvatar(posting.profile_pic)} style = {{height:'40px',width:'40px'}} alt = 'not working/>
  <a class="nav-link"  >{posting.username}</a> </h5> 
     <p class="card-text">{posting.content}</p>
   </div>
