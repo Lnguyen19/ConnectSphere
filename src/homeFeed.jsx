@@ -204,22 +204,24 @@ axios.get("https://mysocial-1473059facea.herokuapp.com/getPosts",{withCredential
 },[posts]);
 
 
-useEffect(()=>{
-axios.post("https://mysocial-1473059facea.herokuapp.com/currentSession", { withCredentials: true }).then((response)=>{
-if(response.data.username){
-  console.log(`the current user is ${response.data.username}`)
-  setUser(response.data.username);
-}
-else {
-  console.log(response.data)
-console.log("something else is wrong")
-}
+useEffect(() => {
+  axios.post("https://mysocial-1473059facea.herokuapp.com/currentSession", {}, {
+    withCredentials: true,
+  })
+  .then((response) => {
+    if (response.data.username) {
+      console.log(`the current user is ${response.data.username}`);
+      setUser(response.data.username);
+    } else {
+      console.log(response.data);
+      console.log("something else is wrong");
+    }
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+}, [user]);
 
-}).catch(error=>{
-  console.log(error)
-})
-
-},[user]);
 
 
 const addPost = async () => {
