@@ -205,22 +205,25 @@ axios.get("https://mysocial-1473059facea.herokuapp.com/getPosts",{withCredential
 
 
 useEffect(() => {
-  axios.post("https://mysocial-1473059facea.herokuapp.com/currentSession", {}, {
-    withCredentials: true,
+  fetch("https://mysocial-1473059facea.herokuapp.com/currentSession", {
+    method: 'POST',
+    credentials: 'include',
   })
-  .then((response) => {
-    if (response.data.username) {
-      console.log(`the current user is ${response.data.username}`);
-      setUser(response.data.username);
+  .then(response => response.json())
+  .then(data => {
+    if (data.username) {
+      console.log(`the current user is ${data.username}`);
+      setUser(data.username);
     } else {
-      console.log(response.data);
+      console.log(data);
       console.log("something else is wrong");
     }
   })
-  .catch((error) => {
-    console.log(error);
+  .catch(error => {
+    console.error(error);
   });
 }, [user]);
+
 
 
 
