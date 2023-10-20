@@ -39,7 +39,7 @@ if(picture=='undefined'){
      beingReturn = 'https://i.pinimg.com/736x/f1/0f/f7/f10ff70a7155e5ab666bcdd1b45b726d.jpg';
 }
 else {
-  beingReturn =  `https://mysocial-1473059facea.herokuapp.com/${picture}`;
+  beingReturn =  `https://res.cloudinary.com/dmyyrftce/image/upload/${picture}`;
 }
 //console.log(beingReturn);
 return beingReturn;
@@ -77,7 +77,7 @@ const uploadProfilePic=()=>{
   const formData = new FormData();
   formData.append('pictureUrl',profile_pic);
 axios.post(`https://mysocial-1473059facea.herokuapp.com/addProfilePicture/${username.username}`,formData,{withCredentials:true}).then(response=>{
-  setPicture(`https://mysocial-1473059facea.herokuapp.com${response.data.pictureUrl}`)
+  setPicture(`https://res.cloudinary.com/dmyyrftce/image/upload/${response.data.pictureUrl}`)
   console.log('sent successfully');
 }).catch(error=>{
   console.log(error);
@@ -86,7 +86,7 @@ const uploadBackgroundPic = ()=>{
 const formData = new FormData();
 formData.append('background',background);
 axios.post(`https://mysocial-1473059facea.herokuapp.com/addBackgroundPicture/${username.username}`,formData,{withCredentials:true}).then(response=>{
-setBackground_picture(`https://mysocial-1473059facea.herokuapp.com${response.data.background}`)
+setBackground_picture(`https://res.cloudinary.com/dmyyrftce/image/upload/${response.data.background}`)
 console.log('sent background successfully');
 
 }).catch(error=>{
@@ -110,13 +110,13 @@ axios.get(`https://mysocial-1473059facea.herokuapp.com/viewProfile/${profile.use
   }
 
  if (response.data.pictureUrl) {
-          setPicture(`https://mysocial-1473059facea.herokuapp.com${response.data.pictureUrl}`);
+          setPicture(`https://res.cloudinary.com/dmyyrftce/image/upload/${response.data.pictureUrl}`);
         } else {
           setPicture(alt_profile);
         }
 
  if(response.data.background){
-  setBackground_picture(`https://mysocial-1473059facea.herokuapp.com${response.data.background}`);
+  setBackground_picture(`https://res.cloudinary.com/dmyyrftce/image/upload/${response.data.background}`);
  }else {
   setBackground_picture(alt_background);
  }
@@ -239,7 +239,7 @@ else {
    <div  class="card" style={{width: "1000px"}}>
  { //<img class="card-img-top" src="https://assets2.cbsnewsstatic.com/hub/i/r/2023/03/15/749d5e5c-e9bd-43bd-a4c0-682b6e7b2ce3/thumbnail/640x360/dfde84421bdc52d56b818dddb1b06d4b/image009.png?v=ab9bbd2a20facf22a21dc5066c583597" style = {{height:'500px',width:'70%'}}alt="Card image cap"/>
   }
-  <img class="card-img-top" src={`https://mysocial-1473059facea.herokuapp.com${posting.picture}`} style = {{height:'500px',width:'auto'}}alt="Card image cap"/>
+  <img class="card-img-top" src={`https://res.cloudinary.com/dmyyrftce/image/upload/${posting.picture}`} style = {{height:'500px',width:'auto'}}alt="Card image cap"/>
 
   <div class="card-body" >
 

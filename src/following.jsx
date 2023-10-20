@@ -72,7 +72,7 @@ const getProfilePic = async (username) => {
       if (profilePicResponse.data && profilePicResponse.data.length > 0) {
         if( profilePicResponse.data[0].pictureUrl){
         console.log("Fetched profile picture URL:", profilePicResponse.data[0].pictureUrl);
-        return `https://mysocial-1473059facea.herokuapp.com/${profilePicResponse.data[0].pictureUrl}`;
+        return `https://res.cloudinary.com/dmyyrftce/image/upload/${profilePicResponse.data[0].pictureUrl}`;
             }
 
         else{ console.log('No profile picture found.');
