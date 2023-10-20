@@ -86,24 +86,15 @@ axios.post(`https://mysocial-1473059facea.herokuapp.com/addProfilePicture`,formD
 const uploadBackgroundPic = ()=>{
 
 const formData = new FormData();
-formData.append('username', username.username);
-formData.append('background', background);
+  formData.append('username',username.username)
+formData.append('background',background);
+axios.post(`https://mysocial-1473059facea.herokuapp.com/addBackgroundPicture`,{params:{formData}},{withCredentials:true}).then(response=>{
+setBackground_picture(`https://res.cloudinary.com/dmyyrftce/image/upload/${response.data.background}`)
+console.log(response.data.background);
 
-axios.post(`https://mysocial-1473059facea.herokuapp.com/addBackgroundPicture`, formData, { withCredentials: true })
-    .then(response => {
-        if (response.data && response.data.background) {
-            const imageUrl = `https://res.cloudinary.com/dmyyrftce/image/upload/${response.data.background}`;
-            setBackground_picture(imageUrl);
-            console.log(response.data.background);
-            console.log('Background picture uploaded successfully');
-        } else {
-            console.error('Unexpected response format:', response.data);
-        }
-    })
-    .catch(error => {
-        console.error('Error uploading background picture:', error);
-    });
-
+}).catch(error=>{
+  console.log(error);
+})
 
 }
 
