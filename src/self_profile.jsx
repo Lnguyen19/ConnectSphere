@@ -75,14 +75,16 @@ const uploadBio = ()=>{
 //____________________________________________________________________
 const uploadProfilePic=()=>{
   const formData = new FormData();
+  formData.append('username',user)
   formData.append('pictureUrl',profile_pic);
-axios.post(`https://mysocial-1473059facea.herokuapp.com/addProfilePicture/${username.username}`,formData,{withCredentials:true}).then(response=>{
+axios.post(`https://mysocial-1473059facea.herokuapp.com/addProfilePicture`,formData,{withCredentials:true}).then(response=>{
   setPicture(`https://res.cloudinary.com/dmyyrftce/image/upload/${response.data.pictureUrl}`)
   console.log('sent successfully');
 }).catch(error=>{
   console.log(error);
 })}
 const uploadBackgroundPic = ()=>{
+
 const formData = new FormData();
 formData.append('background',background);
 axios.post(`https://mysocial-1473059facea.herokuapp.com/addBackgroundPicture/${username.username}`,formData,{withCredentials:true}).then(response=>{
