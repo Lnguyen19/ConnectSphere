@@ -34,12 +34,25 @@ console.log("something else is wrong")
 })
 
 },[user])
+const click_on_profile = (username)=>{
+if(username==user){
+  navigate('/self',{state:{postingData:posting}});
+}
+else if (username){
+navigate('/profile_view', {state: {postingData: posting}});
+
+}
+else {
+
+}
+
+}
 
 return(<>
 <div className = 'navBar_'>
 <nav class="navbar navbar-expand-lg navbar-light " >
   <div class="container-fluid">
-    <a class="navbar-brand " href="#">Hi {user}</a>
+    <a class="navbar-brand "  onClick = {()=> click_on_profile(user)}>Hi {user}</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
