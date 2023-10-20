@@ -90,7 +90,7 @@ const formData = new FormData();
 formData.append('background',background);
 axios.post(`https://mysocial-1473059facea.herokuapp.com/addBackgroundPicture`,{params:{formData}},{withCredentials:true}).then(response=>{
 setBackground_picture(`https://res.cloudinary.com/dmyyrftce/image/upload/${response.data.background}`)
-console.log(background_picture);
+console.log(response.data.background);
 
 }).catch(error=>{
   console.log(error);
