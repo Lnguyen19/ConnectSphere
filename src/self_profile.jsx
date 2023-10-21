@@ -84,19 +84,32 @@ axios.post(`https://mysocial-1473059facea.herokuapp.com/addProfilePicture`,formD
   console.log(error);
 })}
 const uploadBackgroundPic = () => {
-  const formData = new FormData();
-  formData.append('username', username.username);
-  formData.append('background', background);
+  const file = background; // Assuming background is the file object
+  const username = username.username;
 
-  axios.post("https://mysocial-1473059facea.herokuapp.com/addBackgroundPicture", formData, { withCredentials: true })
+  const formData = new FormData();
+  formData.append('username', username);
+
+  axios.post(
+    `https://mysocial-1473059facea.herokuapp.com/addBackgroundPicture`,
+    file,
+    {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+      withCredentials: true,
+    }
+  )
     .then(response => {
+      console.log('Response from server:', response.data);
       setBackground_picture(`https://res.cloudinary.com/dmyyrftce/image/upload/${response.data.background}`);
-      console.log('sent background successfully');
+      console.log('Sent background successfully');
     })
     .catch(error => {
-      console.error(error);
+      console.error('Error in request:', error);
     });
-}
+};
+
 
 
 
