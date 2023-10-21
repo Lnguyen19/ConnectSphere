@@ -50,7 +50,7 @@ if(picture=='undefined'){
      beingReturn = 'https://i.pinimg.com/736x/f1/0f/f7/f10ff70a7155e5ab666bcdd1b45b726d.jpg';
 }
 else {
-  beingReturn =  `https://mysocial-1473059facea.herokuapp.com${picture}`;
+  beingReturn =  `https://res.cloudinary.com/dmyyrftce/image/upload/${picture}`;
 }
 //console.log(beingReturn);
 return beingReturn;
