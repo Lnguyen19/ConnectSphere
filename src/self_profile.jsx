@@ -75,7 +75,7 @@ const uploadBio = ()=>{
 //____________________________________________________________________
 const uploadProfilePic=()=>{
   const formData = new FormData();
-  formData.append('username',user)
+  formData.append('username',username.username)
   formData.append('pictureUrl',profile_pic);
 axios.post(`https://mysocial-1473059facea.herokuapp.com/addProfilePicture`,formData,{withCredentials:true}).then(response=>{
   setPicture(`https://res.cloudinary.com/dmyyrftce/image/upload/${response.data.pictureUrl}`)
