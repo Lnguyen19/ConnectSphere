@@ -158,7 +158,7 @@ const uploadProfilePic=()=>{
   const formData = new FormData();
   formData.append('pictureUrl',profile_pic);
 axios.post(`https://mysocial-1473059facea.herokuapp.com/addProfilePicture/${username.username}`,formData,{withCredentials:true}).then(response=>{
-  setPicture(`https://mysocial-1473059facea.herokuapp.com${response.data.pictureUrl}`)
+  setPicture(`https://res.cloudinary.com/dmyyrftce/image/upload/${response.data.pictureUrl}`)
   console.log('sent successfully');
 }).catch(error=>{
   console.log(error);
@@ -167,7 +167,7 @@ const uploadBackgroundPic = ()=>{
 const formData = new FormData();
 formData.append('background',background);
 axios.post(`https://mysocial-1473059facea.herokuapp.com/addBackgroundPicture/${username.username}`,formData,{withCredentials:true}).then(response=>{
-setBackground_picture(`https://mysocial-1473059facea.herokuapp.com${response.data.background}`)
+setBackground_picture(`https://res.cloudinary.com/dmyyrftce/image/upload/${response.data.background}`)
 console.log('sent background successfully');
 
 }).catch(error=>{
