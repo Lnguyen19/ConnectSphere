@@ -85,8 +85,9 @@ axios.post(`https://mysocial-1473059facea.herokuapp.com/addProfilePicture`,formD
 })}
 const uploadBackgroundPic = ()=>{
 const formData = new FormData();
+formData.append('username',username.username);
 formData.append('background',background);
-axios.post(`https://mysocial-1473059facea.herokuapp.com/addBackgroundPicture/${profile.username}`,formData,{withCredentials:true}).then(response=>{
+axios.post(`https://mysocial-1473059facea.herokuapp.com/addBackgroundPicture`,formData,{withCredentials:true}).then(response=>{
 setBackground_picture(`https://res.cloudinary.com/dmyyrftce/image/upload/${response.data.background}`)
 console.log('sent background successfully');
 
