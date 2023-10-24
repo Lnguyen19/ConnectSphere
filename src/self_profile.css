@@ -27,6 +27,7 @@
 
 #all{
 		overflow-x: hidden;
+		background-image: url('cucumber.png');;
 }
 #stats{
 	position: relative;
