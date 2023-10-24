@@ -204,7 +204,7 @@ return(<>;
 </div>
 
 <div id='stats'> <h3>Followers:  Following:  Total Post: 34</h3> </div>
-<div id = 'actions'> <button class = 'btn-lg btn-success'>Message</button>  <button class = 'btn-lg btn-primary' >Follow</button> </div>
+<div id = 'actions'> <button class = 'btn-lg btn-success'>Self</button>  <button class = 'btn-lg btn-primary' >Profile</button> </div>
 </div>
 
 
