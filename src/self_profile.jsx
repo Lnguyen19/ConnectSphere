@@ -24,7 +24,8 @@ const [background_picture,setBackground_picture] = useState(alt_background);
 const [bio,setBio] = useState(default_bio);
 const [biography,setBiography] = useState(default_bio);
 const [readOnly_,setReadOnly_] = useState(true);
-
+const [followings,setFollowings] = useState([]);
+const [followers,setFollowers] = useState([]);
 
 //_____testing
 
@@ -175,7 +176,34 @@ else {
   return 0;
 }
 }
- 
+ useEffect(()=>{
+  axios.get(`https://mysocial-1473059facea.herokuapp.com/getFollowers/${username.username}`,{withCredentials:true}).then(response=>{
+    if(response.data){
+      setFollowers(response.data);
+      console.log('the data is ',response.data)
+    }
+    else{
+      console.log('something went wrong');
+    }
+  }).catch(error=>{
+    console.log(error);
+  })
+axios.get(`https://mysocial-1473059facea.herokuapp.com/getFollowing/${username.username}`,{withCredentials:true}).then(response=>{
+if(response.data){
+  setFollowings(response.data);
+  console.log('the data is ',response.data);
+}
+else {
+  console.log('something was wrong');
+}
+
+})
+
+
+
+
+
+},[username.username])
 
 //_____________________________________
 return(<>;
@@ -203,7 +231,7 @@ return(<>;
 </div>
 </div>
 
-<div id='stats'> <h3>Followers:  Following:  Total Post: 34</h3> </div>
+<div id='stats'> <h3>Followers:{followers.length}  Following:{followings.length}  </h3> </div>
 <div id = 'actions'> <button class = 'btn-lg btn-success'>Self</button>  <button class = 'btn-lg btn-primary' >Profile</button> </div>
 </div>
 
