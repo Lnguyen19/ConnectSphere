@@ -31,6 +31,7 @@ const [canLike,setCanLike] = useState(true);
 const [feedPicture,setFeedPicture] = useState('');
 //var profile_pic ;
 ///__________________________
+const [profilePic_,setProfilePic_] = useState([]);
 const navigate = useNavigate();
 
 //________________________________________
@@ -269,7 +270,42 @@ const addPost = async () => {
 };
 
 
+const getProfilePic = async (username) => {
+    try {
+      const profilePicResponse = await axios.get(`https://mysocial-1473059facea.herokuapp.com/getProfilePic/${username}`, { withCredentials: true });
 
+      if (profilePicResponse.data && profilePicResponse.data.length > 0) {
+        if( profilePicResponse.data[0].pictureUrl){
+        console.log("Fetched profile picture URL:", profilePicResponse.data[0].pictureUrl);
+        return `https://res.cloudinary.com/dmyyrftce/image/upload/${profilePicResponse.data[0].pictureUrl}`;
+            }
+
+        else{ console.log('No profile picture found.');
+        return 'https://i.pinimg.com/736x/f1/0f/f7/f10ff70a7155e5ab666bcdd1b45b726d.jpg';
+
+        }
+
+
+      } else {
+        console.log('No profile picture found.');
+        return 'https://i.pinimg.com/736x/f1/0f/f7/f10ff70a7155e5ab666bcdd1b45b726d.jpg';
+      }
+    } catch (error) {
+      console.log(error);
+      return 'https://i.pinimg.com/736x/f1/0f/f7/f10ff70a7155e5ab666bcdd1b45b726d.jpg';
+    }
+
+
+  };
+  useEffect(() => {
+   
+    const fetchProfilePics = async () => {
+      const pics = await Promise.all(posts.map(async (post) => await getProfilePic(post.username)));
+      setProfilePic_(pics);
+    };
+
+    fetchProfilePics();
+  }, [posts]);
 
 return(<>
   <div id = 'wholeThing'>
@@ -325,7 +361,7 @@ else {
   <div class="card-body" >
 
     <h5 class="card-title"> 
-<img src = {userAvatar(posting.profile_pic)} style = {{height:'40px',width:'40px'}}/>
+<img src = {profilePic_[index]} style = {{height:'40px',width:'40px'}}/>
      {"  "}  <a class="nav-link"  onClick={()=>click_on_profile(posting)}>{posting.username}</a> </h5> 
     <p class="card-text">{posting.content}</p>
   </div>
