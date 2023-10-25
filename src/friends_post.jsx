@@ -205,7 +205,7 @@ const getProfilePic = async (username) => {
   useEffect(() => {
    
     const fetchProfilePics = async () => {
-      const pics = await Promise.all(posts.map(async (post) => await getProfilePic(post.username)));
+      const pics = await Promise.all(joint.map(async (post) => await getProfilePic(post.username)));
       setProfilePic_(pics);
     };
 
