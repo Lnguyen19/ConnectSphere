@@ -347,7 +347,7 @@ return(<>
     }
 else {
  return posts.map((posting,index)=>(
- <div id = 'posts_photos' key = {index} class = `post_num_${index}`>
+ <div id = 'posts_photos' key = {index} class = {`post_num_${index}`}>
     { // <img src={`http://localhost:3001${posting.picture}`} style = {{height:'500px',width:'600px'}}/>
   }
     <div  class = 'container' onLoad = {()=>userExist(user,posting.likesCount)}>
