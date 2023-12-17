@@ -375,7 +375,7 @@ else {
   </div>
   <div id = 'comment_section'>
    <input type = 'text' id = 'comments' onChange = {(e)=>{setComment(e.target.value)}}/>
-   <button id = 'post_comment' onClick = {()=>add_comment(comment,posting._id,user)}>Post Comment</button>
+   <button id = 'post_comment' className = {`button_num_${index}`} onClick = {()=>add_comment(comment,posting._id,user)}>Post Comment</button>
 
  </div>
   <div class="card-body" >
