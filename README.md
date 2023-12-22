@@ -161,6 +161,39 @@ Displays the total number of followers at the top of the component.
 Ensures a user-friendly layout with a clean separation of recent conversations and conversation content.
 Responsive design adapts the main content area based on user interactions.
 
+# Search Component Frontend Implementation
+The Search component in our React.js-based Social Media App focuses on providing users with the ability to search for other users. Here's an in-depth breakdown of its functionality:
+
+## State Management:
+### useState Hook:
+Utilizes the useState hook to manage state variables such as username and searchInput.
+## User Data Fetching:
+### Search Query Handling:
+Utilizes the useEffect hook to trigger a GET request to the /search endpoint whenever the searchInput changes.
+Fetches user data based on the entered search input.
+### User Not Found Handling:
+Checks if the response contains valid user data. If not, displays a "User Not Found" message.
+## User Avatar Handling:
+### User Avatar Function:
+Implements the userAvatar function to construct the appropriate URL for a user's profile picture.
+Utilizes Cloudinary for image storage and retrieval.
+## Component Rendering:
+### Navbar Integration:
+
+Integrates a NavBar component for consistent navigation within the application.
+### Search Bar:
+
+Displays a search bar with an input field and a search button.
+Iconography (search icon) enhances the visual appeal of the search bar.
+### Search Result Display:
+
+Conditionally renders search results based on whether the user was found or not.
+If the user is found, displays their profile picture and username.
+## Responsive Design:
+### Layout Structure:
+Ensures a user-friendly layout with a clean separation of the search bar and search results.
+Responsive design adapts to different screen sizes.
+
 ## Setup
 
 To run the Social Media App locally, follow these steps:
