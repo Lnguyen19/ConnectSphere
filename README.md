@@ -1,8 +1,8 @@
-# Social Media App
+# Connect-Sphere 
 
 ## Overview
 
-The Social Media App is a full-stack application designed to provide users with a comprehensive social experience. This README.md file serves as a guide to understand the project structure, features, and how to set it up locally.
+Connect-Sphere is a full-stack application designed to provide users with a comprehensive social experience. This README.md file serves as a guide to understand the project structure, features, and how to set it up locally.
 
 ## Features
 
@@ -196,7 +196,7 @@ Responsive design adapts to different screen sizes.
 
 ## Setup
 
-To run the Social Media App locally, follow these steps:
+To run Connect-Sphere  locally, follow these steps:
 
 1. **Clone the repository:**
 
