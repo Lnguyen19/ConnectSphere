@@ -124,6 +124,42 @@ Implements functionality to upload the new pictures to the server.
 Allows users to view and edit their biography.
 Incorporates options for users to edit and submit changes to their bio.
 
+## Followers and Following Component Frontend Implementation
+The Followers component in our React.js-based Social Media App focuses on managing user followers and providing a user-friendly interface for interactions. Here's a detailed breakdown of its 
+ ### functionality:
+State Management
+### useState Hook:
+Utilizes the useState hook to manage state variables such as friends, Following, username, and profilePic.
+### User Avatar Function:
+Implements the userAvatar function to construct the appropriate URL for a user's profile picture.
+Utilizes Cloudinary for image storage and retrieval.
+### Profile Picture Fetching:
+Utilizes the getProfilePic function to asynchronously fetch a user's profile picture from the server.
+Handles cases where no profile picture is found or an error occurs during fetching.
+### Profile Picture Rendering:
+Uses the useEffect hook to dynamically fetch and render profile pictures for each follower when the component mounts.
+Renders profile pictures within the list of followers and followings.
+## User Data Fetching:
+### Current Session Retrieval:
+Initiates a POST request to the /currentSession endpoint to fetch the current session user's username securely.
+Sets the username state variable.
+### Follower Data Fetching:
+Fetches the list of followers or followings  for the current user with a GET request to the /getFollowers/${username} (Will be /getFollowing/${username} for the following section) endpoint.
+Sets the friends state variable with follower data and the following data.
+## Unfollow / Remove Functionality:
+### Unfollow/ Remove Function:
+Implements the unfollow and removes functions to remove a follower or to unfollow and updates the state accordingly.
+Sends DELETE requests to the server to remove the follower and following relationships.
+## Component Rendering:
+### Navbar Integration:
+Integrates a NavBar component for seamless navigation within the application.
+### Followers and Followings  Display:
+Maps through the friends array to render each follower's profile picture, username, and a "Remove" button.
+Displays the total number of followers at the top of the component.
+## Responsive Design:
+### Layout Structure:
+Ensures a user-friendly layout with a clean separation of recent conversations and conversation content.
+Responsive design adapts the main content area based on user interactions.
 
 ## Setup
 
