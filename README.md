@@ -67,7 +67,7 @@ Dynamically loads and displays messages tailored to the selected user, ensuring 
 ### Responsive Design
 The sidebar showcases recent conversations, while the main content area adapts based on user interactions.
 
-### Implementation Details
+## Implementation Details
 ### User Authentication:
 Initiates by fetching the current user's information through a secure POST request to the server's /currentSession endpoint.
 
@@ -82,6 +82,47 @@ Adapts its content based on whether a conversation is selected. If no user is ch
 
 ### Dynamic Loading:
 Messages for the selected user are loaded dynamically, enhancing the user experience and providing a seamless interaction flow.
+
+
+## Profile_view Frontend Implementation
+Our Social Media App's frontend, powered by React.js, includes the Profile_view component, a central element for viewing user profiles. Here's a brief insight into its features:
+
+### User Profile Display:
+Showcases the user's profile picture, background picture, and essential details such as username, name, and age.
+Allows users to view the total number of followers, followings, and posts.
+
+### Follow and Message Functionality:
+Provides options for users to follow or unfollow a profile.
+Includes a messaging button to initiate direct communication.
+
+### Bio Section:
+Displays the user's biography and allows for easy editing.
+
+### Post Section:
+Presents a collection of user posts with associated details.
+Users can like, comment, and view additional information about each post.
+## Implementation Details
+### User Profile Display:
+Utilizes state variables to manage user-related information, such as profile and background pictures, bio, and follower details.
+### Follow and Message Functionality:
+Employs asynchronous functions for handling follow/unfollow actions.
+Integrates a messaging button to direct users to the direct messaging feature.
+### Bio Section:
+Enables users to view and edit their biography.
+Implements functionality to upload a new bio.
+### Post Section:
+Fetches and displays user posts dynamically.
+Utilizes cloudinary for efficient handling of profile pictures associated with each post.
+### Dynamic Profile Pictures:
+Fetches profile pictures asynchronously and ensures efficient rendering.
+
+## Self-Profile
+### Profile Picture and Background Update:
+Integrates file input elements for users to select and update their profile and background pictures.
+Implements functionality to upload the new pictures to the server.
+### Bio Section:
+Allows users to view and edit their biography.
+Incorporates options for users to edit and submit changes to their bio.
 
 
 ## Setup
