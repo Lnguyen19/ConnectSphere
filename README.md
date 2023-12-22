@@ -91,4 +91,4 @@ To run the Social Media App locally, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/social-media-app.git
+   git clone https://github.com/Lnguyen19/ConnectSphere
